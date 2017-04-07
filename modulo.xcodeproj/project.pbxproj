@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1716F84C1E9853E4004B52A5 /* ForkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716F84B1E9853E4004B52A5 /* ForkCommand.swift */; };
+		1716F8541E9854C4004B52A5 /* ForkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716F84B1E9853E4004B52A5 /* ForkCommand.swift */; };
 		468A8B171DF3F8B10060D93C /* TestGit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A8B161DF3F8B10060D93C /* TestGit.swift */; };
 		653A1E5A1E2CA3BB00F24E70 /* TestCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A1E591E2CA3BB00F24E70 /* TestCheckout.swift */; };
 		655F0C1F1DC3D6CE009DDD72 /* ELFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE55C761D14942D00411727 /* ELFoundation.framework */; };
@@ -229,6 +231,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1716F84B1E9853E4004B52A5 /* ForkCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForkCommand.swift; sourceTree = "<group>"; };
 		468A8B161DF3F8B10060D93C /* TestGit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestGit.swift; sourceTree = "<group>"; };
 		653A1E591E2CA3BB00F24E70 /* TestCheckout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCheckout.swift; sourceTree = "<group>"; };
 		659D689B1E33E748008750C2 /* SetCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCommand.swift; sourceTree = "<group>"; };
@@ -493,6 +496,7 @@
 			isa = PBXGroup;
 			children = (
 				CAE55C961D1494B200411727 /* InitCommand.swift */,
+				1716F84B1E9853E4004B52A5 /* ForkCommand.swift */,
 				CAE55D1B1D14CA1800411727 /* AddCommand.swift */,
 				CAAB6E1D1D19BD3B00F22C48 /* UpdateCommand.swift */,
 				CACB20C21D3457A100ACA574 /* StatusCommand.swift */,
@@ -854,6 +858,7 @@
 				CAE55D1A1D14CA0700411727 /* InitCommand.swift in Sources */,
 				CAE55CF11D149C0B00411727 /* CLI.swift in Sources */,
 				CAE55D1C1D14CA1800411727 /* AddCommand.swift in Sources */,
+				1716F8541E9854C4004B52A5 /* ForkCommand.swift in Sources */,
 				659D68A61E340516008750C2 /* MapCommand.swift in Sources */,
 				CAE55CD31D1497A200411727 /* Synchronization.swift in Sources */,
 				CAE55CE51D149BD800411727 /* EncodeOperators.swift in Sources */,
@@ -903,6 +908,7 @@
 				CA0A3F141D5A3D7700A7F0BB /* Semver.swift in Sources */,
 				CA3354511D185C7600ACD91C /* Actions.swift in Sources */,
 				65F735701E008A320091D3A0 /* System.m in Sources */,
+				1716F84C1E9853E4004B52A5 /* ForkCommand.swift in Sources */,
 				CACB213F1D3D8D7B00ACA574 /* RemoveCommand.swift in Sources */,
 				659D689C1E33E748008750C2 /* SetCommand.swift in Sources */,
 				CACB20C31D3457A100ACA574 /* StatusCommand.swift in Sources */,

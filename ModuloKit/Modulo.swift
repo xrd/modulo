@@ -29,7 +29,7 @@ open class Modulo: NSObject {
             cli.allArgumentsToExecutable = args
         }
         
-        cli.addCommands([InitCommand(), AddCommand(), UpdateCommand(), StatusCommand(), MapCommand(), SetCommand()])
+        cli.addCommands([InitCommand(), AddCommand(), UpdateCommand(), StatusCommand(), MapCommand(), SetCommand(), ForkCommand()])
         
         if let error = ErrorCode(rawValue: cli.run()) {
             if error == .success {
