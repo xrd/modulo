@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1716F84C1E9853E4004B52A5 /* ForkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716F84B1E9853E4004B52A5 /* ForkCommand.swift */; };
 		1716F8541E9854C4004B52A5 /* ForkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716F84B1E9853E4004B52A5 /* ForkCommand.swift */; };
+		1716F85A1E98A5E7004B52A5 /* TestFork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716F8591E98A5E7004B52A5 /* TestFork.swift */; };
+		1716F8611E98ACB7004B52A5 /* MockURLSession in Resources */ = {isa = PBXBuildFile; fileRef = 1716F8601E98ACB7004B52A5 /* MockURLSession */; };
 		468A8B171DF3F8B10060D93C /* TestGit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A8B161DF3F8B10060D93C /* TestGit.swift */; };
 		653A1E5A1E2CA3BB00F24E70 /* TestCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A1E591E2CA3BB00F24E70 /* TestCheckout.swift */; };
 		655F0C1F1DC3D6CE009DDD72 /* ELFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE55C761D14942D00411727 /* ELFoundation.framework */; };
@@ -232,6 +234,9 @@
 
 /* Begin PBXFileReference section */
 		1716F84B1E9853E4004B52A5 /* ForkCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForkCommand.swift; sourceTree = "<group>"; };
+		1716F8591E98A5E7004B52A5 /* TestFork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFork.swift; sourceTree = "<group>"; };
+		1716F85B1E98A6FF004B52A5 /* MockURLSession */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MockURLSession; path = Modules/MockURLSession; sourceTree = SOURCE_ROOT; };
+		1716F8601E98ACB7004B52A5 /* MockURLSession */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MockURLSession; path = Modules/MockURLSession; sourceTree = SOURCE_ROOT; };
 		468A8B161DF3F8B10060D93C /* TestGit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestGit.swift; sourceTree = "<group>"; };
 		653A1E591E2CA3BB00F24E70 /* TestCheckout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCheckout.swift; sourceTree = "<group>"; };
 		659D689B1E33E748008750C2 /* SetCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCommand.swift; sourceTree = "<group>"; };
@@ -433,6 +438,7 @@
 		CAE55C5D1D1492A500411727 /* ModuloKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				1716F8591E98A5E7004B52A5 /* TestFork.swift */,
 				CAE55C5E1D1492A500411727 /* ModuloKitTests.swift */,
 				CA0A3F1C1D5A557A00A7F0BB /* SemverTests.swift */,
 				CACB20B91D341A9200ACA574 /* Utils.swift */,
@@ -454,6 +460,7 @@
 		CAE55C691D14941E00411727 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1716F8601E98ACB7004B52A5 /* MockURLSession */,
 				CAE55C831D14943900411727 /* ELCodable.xcodeproj */,
 				CAE55C791D14943300411727 /* ELCLI.xcodeproj */,
 				CAE55C6A1D14942D00411727 /* ELFoundation.xcodeproj */,
@@ -528,6 +535,7 @@
 		CAE55CB41D14976300411727 /* Modules - Source */ = {
 			isa = PBXGroup;
 			children = (
+				1716F85B1E98A6FF004B52A5 /* MockURLSession */,
 				CAE55CE71D149C0B00411727 /* ELCLI */,
 				CAE55CD41D149BD800411727 /* ELCodable */,
 				CAE55CB51D14976B00411727 /* ELFoundation */,
@@ -828,6 +836,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1716F8611E98ACB7004B52A5 /* MockURLSession in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -935,6 +944,7 @@
 				CAE93D111D21A7BD00C00811 /* TestUpdate.swift in Sources */,
 				CA3354461D15C91000ACD91C /* TestAdd.swift in Sources */,
 				CACB20BA1D341A9200ACA574 /* Utils.swift in Sources */,
+				1716F85A1E98A5E7004B52A5 /* TestFork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

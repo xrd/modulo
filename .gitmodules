@@ -1,0 +1,3 @@
+[submodule "Modules/MockURLSession"]
+	path = Modules/MockURLSession
+	url = https://github.com/announce/MockURLSession
