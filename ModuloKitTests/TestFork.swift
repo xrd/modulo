@@ -17,25 +17,6 @@ import
 
 class TestFork: XCTestCase {
     let modulo = Modulo()
-    
-
-    let session = MockURLSession()
-    
-    // Starting stub for mocking the GitHub API request
-    func test_GET_RequestsTheURL() {
-        
-        
-        // Inject the session to the target app code and the response will be mocked like below
-//        let app = Modulo.init(session: session)
-        app.doSomething()
-        
-        print(NSString(data:app.data!, encoding:NSUTF8StringEncoding)!)  // Foo 123
-        print(app.error)    // nil
-        
-        // Make sure that the data task is resumed in the app code
-        print(session.resumedResponse(MyApp.apiUrl) != nil)  // true
-    }
-    
     var session = nil
     
     override func setUp() {
@@ -77,7 +58,10 @@ class TestFork: XCTestCase {
         
         let result = Modulo.run(["fork", "--only", "test-add" ], session: session )
         XCTAssertTrue(result == .success)
+        
+        // Let's verify that the session got what was supposed to happen
         XCTAssertTrue(session)
+        print(session.resumedResponse(MyApp.apiUrl) != nil)  // true
     }
     
     // Only fork the specified module using except
