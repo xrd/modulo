@@ -1,4 +1,4 @@
-//
+
 //  TestFork.swift
 //  modulo
 //
@@ -9,22 +9,21 @@
 import XCTest
 import ELCLI
 import ELFoundation
+//@testable
 import MockURLSession
-
-import 
 @testable import ModuloKit
 
 
 class TestFork: XCTestCase {
     let modulo = Modulo()
-    var session = nil
+    var mockUrlSession = nil
     
     override func setUp() {
         super.setUp()
         moduloReset()
         
         // Initialization
-        session = MockURLSession()
+        mockUrlSession = MockURLSession()
         
         // Setup a mock response, need to fix this a bit, not the right API call OBVSLY!
         let data = "{ \"fork\": \"me\", \"on\": \"github\" }".dataUsingEncoding(NSUTF8StringEncoding)!
@@ -56,11 +55,12 @@ class TestFork: XCTestCase {
         
         FileManager.setWorkingPath("test-add")
         
-        let result = Modulo.run(["fork", "--only", "test-add" ], session: session )
+        let result = Modulo.run(["fork", "--only", "test-add" ], session: mockUrlSession )
         XCTAssertTrue(result == .success)
         
         // Let's verify that the session got what was supposed to happen
         XCTAssertTrue(session)
+        
         print(session.resumedResponse(MyApp.apiUrl) != nil)  // true
     }
     
@@ -72,7 +72,7 @@ class TestFork: XCTestCase {
         
         FileManager.setWorkingPath("test-add")
         
-        let result = Modulo.run(["fork", "--except", "test2-add" ])
+        let result = Modulo.run(["fork", "--except", "test2-add" ], session: mockUrlSession )
         XCTAssertTrue(result == .success)
     }
     
