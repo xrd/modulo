@@ -9,25 +9,35 @@
 import XCTest
 import ELCLI
 import ELFoundation
-//@testable
-import MockURLSession
 @testable import ModuloKit
 
+class MockURLSession: NSURLSessionProtocol {
+    private (set) var lastURL: NSURL?
+    
+    func dataTaskWithURL(url: NSURL, completionHandler: DataTaskResult)
+        -> NSURLSessionDataTask
+    {
+        lastURL = url
+        return NSURLSessionDataTask()
+    }
+}
 
 class TestFork: XCTestCase {
     let modulo = Modulo()
-    var mockUrlSession = nil
+    var subject: HTTPClient!
+    let session = MockURLSession()
     
     override func setUp() {
         super.setUp()
         moduloReset()
         
         // Initialization
-        mockUrlSession = MockURLSession()
+//        mockUrlSession = HTTPClient( session: session )
+        subject = HTTPClient(session: session)
         
         // Setup a mock response, need to fix this a bit, not the right API call OBVSLY!
-        let data = "{ \"fork\": \"me\", \"on\": \"github\" }".dataUsingEncoding(NSUTF8StringEncoding)!
-        session.registerMockResponse( "https://api.github.com/v2", data:data)
+//        let data = "{ \"fork\": \"me\", \"on\": \"github\" }".dataUsingEncoding(NSUTF8StringEncoding)!
+//        session.registerMockResponse( "https://api.github.com/v2", data:data)
     }
     
     override func tearDown() {
@@ -58,8 +68,11 @@ class TestFork: XCTestCase {
         let result = Modulo.run(["fork", "--only", "test-add" ], session: mockUrlSession )
         XCTAssertTrue(result == .success)
         
-        // Let's verify that the session got what was supposed to happen
-        XCTAssertTrue(session)
+            let url = NSURL(string: "http://www.tryswiftconf.com")!
+            
+            subject.get(url) { (_, _) -> Void in }
+            
+            XCTAssert(session.lastURL === url)
         
         print(session.resumedResponse(MyApp.apiUrl) != nil)  // true
     }

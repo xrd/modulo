@@ -10,8 +10,6 @@
 		1716F84C1E9853E4004B52A5 /* ForkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716F84B1E9853E4004B52A5 /* ForkCommand.swift */; };
 		1716F8541E9854C4004B52A5 /* ForkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716F84B1E9853E4004B52A5 /* ForkCommand.swift */; };
 		1716F85A1E98A5E7004B52A5 /* TestFork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716F8591E98A5E7004B52A5 /* TestFork.swift */; };
-		17E1E3AB1E9C067600B4C97E /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1E3AA1E9C067600B4C97E /* MockURLSession.swift */; };
-		17E1E3C41E9C06EC00B4C97E /* MockURLSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E1E3BE1E9C06D400B4C97E /* MockURLSession.framework */; };
 		468A8B171DF3F8B10060D93C /* TestGit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A8B161DF3F8B10060D93C /* TestGit.swift */; };
 		653A1E5A1E2CA3BB00F24E70 /* TestCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A1E591E2CA3BB00F24E70 /* TestCheckout.swift */; };
 		655F0C1F1DC3D6CE009DDD72 /* ELFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE55C761D14942D00411727 /* ELFoundation.framework */; };
@@ -99,27 +97,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		17E1E3BD1E9C06D400B4C97E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17E1E3B81E9C06D400B4C97E /* MockURLSession.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C53646821D6D556900CA9813;
-			remoteInfo = MockURLSession;
-		};
-		17E1E3BF1E9C06D400B4C97E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17E1E3B81E9C06D400B4C97E /* MockURLSession.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C536468C1D6D556900CA9813;
-			remoteInfo = MockURLSessionTests;
-		};
-		17E1E3C11E9C06E000B4C97E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17E1E3B81E9C06D400B4C97E /* MockURLSession.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C53646811D6D556900CA9813;
-			remoteInfo = MockURLSession;
-		};
 		655F0C251DC3D6E9009DDD72 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CAE55C831D14943900411727 /* ELCodable.xcodeproj */;
@@ -257,9 +234,6 @@
 /* Begin PBXFileReference section */
 		1716F84B1E9853E4004B52A5 /* ForkCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForkCommand.swift; sourceTree = "<group>"; };
 		1716F8591E98A5E7004B52A5 /* TestFork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFork.swift; sourceTree = "<group>"; };
-		1716F85B1E98A6FF004B52A5 /* MockURLSession */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MockURLSession; path = Modules/MockURLSession; sourceTree = SOURCE_ROOT; };
-		17E1E3AA1E9C067600B4C97E /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockURLSession.swift; path = Modules/MockURLSession/MockURLSession/MockURLSession.swift; sourceTree = "<group>"; };
-		17E1E3B81E9C06D400B4C97E /* MockURLSession.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MockURLSession.xcodeproj; path = Modules/MockURLSession/MockURLSession.xcodeproj; sourceTree = SOURCE_ROOT; };
 		468A8B161DF3F8B10060D93C /* TestGit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestGit.swift; sourceTree = "<group>"; };
 		653A1E591E2CA3BB00F24E70 /* TestCheckout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCheckout.swift; sourceTree = "<group>"; };
 		659D689B1E33E748008750C2 /* SetCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCommand.swift; sourceTree = "<group>"; };
@@ -363,7 +337,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17E1E3C41E9C06EC00B4C97E /* MockURLSession.framework in Frameworks */,
 				655F0C241DC3D6D9009DDD72 /* ELCodable.framework in Frameworks */,
 				655F0C1F1DC3D6CE009DDD72 /* ELFoundation.framework in Frameworks */,
 				65C411E01DC3D6700085365C /* ELCLI.framework in Frameworks */,
@@ -374,15 +347,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17E1E3B91E9C06D400B4C97E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				17E1E3BE1E9C06D400B4C97E /* MockURLSession.framework */,
-				17E1E3C01E9C06D400B4C97E /* MockURLSessionTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		659D68AA1E357286008750C2 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,7 +384,6 @@
 		CAE55C381D14928B00411727 = {
 			isa = PBXGroup;
 			children = (
-				17E1E3AA1E9C067600B4C97E /* MockURLSession.swift */,
 				CAE55C431D14928B00411727 /* modulo */,
 				CAE55C511D1492A500411727 /* ModuloKit */,
 				CAE55C5D1D1492A500411727 /* ModuloKitTests */,
@@ -494,7 +457,6 @@
 		CAE55C691D14941E00411727 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				17E1E3B81E9C06D400B4C97E /* MockURLSession.xcodeproj */,
 				CAE55C831D14943900411727 /* ELCodable.xcodeproj */,
 				CAE55C791D14943300411727 /* ELCLI.xcodeproj */,
 				CAE55C6A1D14942D00411727 /* ELFoundation.xcodeproj */,
@@ -569,7 +531,6 @@
 		CAE55CB41D14976300411727 /* Modules - Source */ = {
 			isa = PBXGroup;
 			children = (
-				1716F85B1E98A6FF004B52A5 /* MockURLSession */,
 				CAE55CE71D149C0B00411727 /* ELCLI */,
 				CAE55CD41D149BD800411727 /* ELCodable */,
 				CAE55CB51D14976B00411727 /* ELFoundation */,
@@ -725,7 +686,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				17E1E3C21E9C06E000B4C97E /* PBXTargetDependency */,
 				655F0C261DC3D6E9009DDD72 /* PBXTargetDependency */,
 				655F0C281DC3D6E9009DDD72 /* PBXTargetDependency */,
 				655F0C2A1DC3D6E9009DDD72 /* PBXTargetDependency */,
@@ -783,10 +743,6 @@
 					ProductGroup = CAE55C6B1D14942D00411727 /* Products */;
 					ProjectRef = CAE55C6A1D14942D00411727 /* ELFoundation.xcodeproj */;
 				},
-				{
-					ProductGroup = 17E1E3B91E9C06D400B4C97E /* Products */;
-					ProjectRef = 17E1E3B81E9C06D400B4C97E /* MockURLSession.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -798,20 +754,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		17E1E3BE1E9C06D400B4C97E /* MockURLSession.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MockURLSession.framework;
-			remoteRef = 17E1E3BD1E9C06D400B4C97E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17E1E3C01E9C06D400B4C97E /* MockURLSessionTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = MockURLSessionTests.xctest;
-			remoteRef = 17E1E3BF1E9C06D400B4C97E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		CAE55C721D14942D00411727 /* ELFoundation.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -985,7 +927,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17E1E3AB1E9C067600B4C97E /* MockURLSession.swift in Sources */,
 				653A1E5A1E2CA3BB00F24E70 /* TestCheckout.swift in Sources */,
 				CACB212D1D3D45B300ACA574 /* TestStatus.swift in Sources */,
 				CA0A3F1D1D5A557A00A7F0BB /* SemverTests.swift in Sources */,
@@ -1004,11 +945,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		17E1E3C21E9C06E000B4C97E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MockURLSession;
-			targetProxy = 17E1E3C11E9C06E000B4C97E /* PBXContainerItemProxy */;
-		};
 		655F0C261DC3D6E9009DDD72 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ELCodable_osx;
