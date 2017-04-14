@@ -10,6 +10,11 @@
 		1716F84C1E9853E4004B52A5 /* ForkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716F84B1E9853E4004B52A5 /* ForkCommand.swift */; };
 		1716F8541E9854C4004B52A5 /* ForkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716F84B1E9853E4004B52A5 /* ForkCommand.swift */; };
 		1716F85A1E98A5E7004B52A5 /* TestFork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716F8591E98A5E7004B52A5 /* TestFork.swift */; };
+		178BDADD1EA131740000D2E8 /* UrlSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178BDADC1EA131740000D2E8 /* UrlSessionProtocol.swift */; };
+		178BDADE1EA131740000D2E8 /* UrlSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178BDADC1EA131740000D2E8 /* UrlSessionProtocol.swift */; };
+		178BDAE71EA131A50000D2E8 /* ModuloUrlSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178BDAE61EA131A50000D2E8 /* ModuloUrlSession.swift */; };
+		178BDAE91EA132B20000D2E8 /* ModuloUrlSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178BDAE61EA131A50000D2E8 /* ModuloUrlSession.swift */; };
+		178BDAEA1EA132BB0000D2E8 /* UrlSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178BDADC1EA131740000D2E8 /* UrlSessionProtocol.swift */; };
 		468A8B171DF3F8B10060D93C /* TestGit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A8B161DF3F8B10060D93C /* TestGit.swift */; };
 		653A1E5A1E2CA3BB00F24E70 /* TestCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A1E591E2CA3BB00F24E70 /* TestCheckout.swift */; };
 		655F0C1F1DC3D6CE009DDD72 /* ELFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE55C761D14942D00411727 /* ELFoundation.framework */; };
@@ -234,6 +239,8 @@
 /* Begin PBXFileReference section */
 		1716F84B1E9853E4004B52A5 /* ForkCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForkCommand.swift; sourceTree = "<group>"; };
 		1716F8591E98A5E7004B52A5 /* TestFork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFork.swift; sourceTree = "<group>"; };
+		178BDADC1EA131740000D2E8 /* UrlSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UrlSessionProtocol.swift; path = ModuloKitTests/UrlSessionProtocol.swift; sourceTree = SOURCE_ROOT; };
+		178BDAE61EA131A50000D2E8 /* ModuloUrlSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuloUrlSession.swift; sourceTree = "<group>"; };
 		468A8B161DF3F8B10060D93C /* TestGit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestGit.swift; sourceTree = "<group>"; };
 		653A1E591E2CA3BB00F24E70 /* TestCheckout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCheckout.swift; sourceTree = "<group>"; };
 		659D689B1E33E748008750C2 /* SetCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCommand.swift; sourceTree = "<group>"; };
@@ -424,6 +431,8 @@
 				CAE55C981D1494B200411727 /* Extensions.swift */,
 				CA3354501D185C7600ACD91C /* Actions.swift */,
 				CA0A3F121D5A3D7700A7F0BB /* Semver.swift */,
+				178BDADC1EA131740000D2E8 /* UrlSessionProtocol.swift */,
+				178BDAE61EA131A50000D2E8 /* ModuloUrlSession.swift */,
 				CAE55C9D1D1494B200411727 /* Specs */,
 				CAE55C9A1D1494B200411727 /* SCM */,
 				CAE55C951D1494B200411727 /* Commands */,
@@ -881,6 +890,7 @@
 				CACB21351D3D4DE500ACA574 /* StatusCommand.swift in Sources */,
 				CAE55D151D14C9EE00411727 /* Extensions.swift in Sources */,
 				CAE55CD11D1497A200411727 /* ObjectAssociation.swift in Sources */,
+				178BDAE91EA132B20000D2E8 /* ModuloUrlSession.swift in Sources */,
 				CAE55D121D14C9EE00411727 /* Modulo.swift in Sources */,
 				CAE55CCE1D1497A200411727 /* TestHelper.swift in Sources */,
 				CAE55CE61D149BD800411727 /* JSON.swift in Sources */,
@@ -891,6 +901,7 @@
 				CAE55CF21D149C0B00411727 /* Command.swift in Sources */,
 				CAE55CC91D1497A200411727 /* NSError.swift in Sources */,
 				CAE55D181D14CA0200411727 /* Git.swift in Sources */,
+				178BDAEA1EA132BB0000D2E8 /* UrlSessionProtocol.swift in Sources */,
 				CAE55CD01D1497A200411727 /* Exceptions.swift in Sources */,
 				CAE55CDF1D149BD800411727 /* Decimal.swift in Sources */,
 				CAE55D131D14C9EE00411727 /* State.swift in Sources */,
@@ -905,12 +916,14 @@
 				CAE55CA61D1494B200411727 /* SCM.swift in Sources */,
 				CAE55CA31D1494B200411727 /* Extensions.swift in Sources */,
 				CAE55CA21D1494B200411727 /* ErrorCode.swift in Sources */,
+				178BDAE71EA131A50000D2E8 /* ModuloUrlSession.swift in Sources */,
 				659D68A71E340516008750C2 /* MapCommand.swift in Sources */,
 				CAAB6E1F1D19BD3B00F22C48 /* UpdateCommand.swift in Sources */,
 				CAE55CA41D1494B200411727 /* Modulo.swift in Sources */,
 				CA0A3F141D5A3D7700A7F0BB /* Semver.swift in Sources */,
 				CA3354511D185C7600ACD91C /* Actions.swift in Sources */,
 				65F735701E008A320091D3A0 /* System.m in Sources */,
+				178BDADD1EA131740000D2E8 /* UrlSessionProtocol.swift in Sources */,
 				1716F84C1E9853E4004B52A5 /* ForkCommand.swift in Sources */,
 				CACB213F1D3D8D7B00ACA574 /* RemoveCommand.swift in Sources */,
 				659D689C1E33E748008750C2 /* SetCommand.swift in Sources */,
@@ -937,6 +950,7 @@
 				CA33544A1D15CA3600ACD91C /* XCTestCase+Exceptions.m in Sources */,
 				CAE93D111D21A7BD00C00811 /* TestUpdate.swift in Sources */,
 				CA3354461D15C91000ACD91C /* TestAdd.swift in Sources */,
+				178BDADE1EA131740000D2E8 /* UrlSessionProtocol.swift in Sources */,
 				CACB20BA1D341A9200ACA574 /* Utils.swift in Sources */,
 				1716F85A1E98A5E7004B52A5 /* TestFork.swift in Sources */,
 			);

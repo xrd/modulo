@@ -22,14 +22,14 @@ open class Modulo: NSObject {
         exit(Int32(error.rawValue))
     }
     
-    open static func run(_ args: [String], session: URLSession? = nil ) -> ErrorCode {
+    open static func run(_ args: [String], session: URLSessionProtocol? = nil ) -> ErrorCode {
         let cli = CLI(name: "modulo", version: "1.0", description: "A simple dependency manager")
         
         if args.count > 0 {
             cli.allArgumentsToExecutable = args
         }
         
-        cli.addCommands([InitCommand(), AddCommand(), UpdateCommand(), StatusCommand(), MapCommand(), SetCommand(), ForkCommand()])
+        cli.addCommands([InitCommand(), AddCommand(), UpdateCommand(), StatusCommand(), MapCommand(), SetCommand(), ForkCommand( session: session )])
         
         if let error = ErrorCode(rawValue: cli.run()) {
             if error == .success {

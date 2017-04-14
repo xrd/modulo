@@ -1,4 +1,3 @@
-
 //  TestFork.swift
 //  modulo
 //
@@ -11,33 +10,41 @@ import ELCLI
 import ELFoundation
 @testable import ModuloKit
 
-class MockURLSession: NSURLSessionProtocol {
-    private (set) var lastURL: NSURL?
+public class MockURLSession : URLSessionProtocol {
     
-    func dataTaskWithURL(url: NSURL, completionHandler: DataTaskResult)
-        -> NSURLSessionDataTask
-    {
-        lastURL = url
-        return NSURLSessionDataTask()
+    public var lastUrl: URL?
+    public var something: String = ""
+    
+    init() {
+        lastUrl = nil
+    }
+
+    init( _ string: String ) {
+        self.something = string
+    }
+    
+    public func synchronousDataTask( _ url: URL ) -> ( Data?, URLResponse?, Error? ) {
+        self.lastUrl = url
+        
+        return ( nil, nil, nil )
     }
 }
 
 class TestFork: XCTestCase {
     let modulo = Modulo()
-    var subject: HTTPClient!
-    let session = MockURLSession()
+    
     
     override func setUp() {
         super.setUp()
         moduloReset()
         
-        // Initialization
-//        mockUrlSession = HTTPClient( session: session )
-        subject = HTTPClient(session: session)
-        
-        // Setup a mock response, need to fix this a bit, not the right API call OBVSLY!
-//        let data = "{ \"fork\": \"me\", \"on\": \"github\" }".dataUsingEncoding(NSUTF8StringEncoding)!
-//        session.registerMockResponse( "https://api.github.com/v2", data:data)
+//        // Initialization
+//        //        mockUrlSession = HTTPClient( session: session )
+//        subject = HttpClient(session: session)
+//        
+//        // Setup a mock response, need to fix this a bit, not the right API call OBVSLY!
+//        //        let data = "{ \"fork\": \"me\", \"on\": \"github\" }".dataUsingEncoding(NSUTF8StringEncoding)!
+//        //        session.registerMockResponse( "https://api.github.com/v2", data:data)
     }
     
     override func tearDown() {
@@ -45,15 +52,15 @@ class TestFork: XCTestCase {
         super.tearDown()
     }
     
-    func testBasicFork() {
-        let status = Git().clone("git@github.com:modulo-dm/test-add.git", path: "test-add")
-        XCTAssertTrue(status == .success)
-        
-        FileManager.setWorkingPath("test-add")
-        
-        let result = Modulo.run(["fork"])
-        XCTAssertTrue(result == .success)
-    }
+//    func testBasicFork() {
+//        let status = Git().clone("git@github.com:modulo-dm/test-add.git", path: "test-add")
+//        XCTAssertTrue(status == .success)
+//        
+//        FileManager.setWorkingPath("test-add")
+//        
+//        let result = Modulo.run(["fork"])
+//        XCTAssertTrue(result == .success)
+//    }
     
     // Only fork the specified module
     //
@@ -62,32 +69,25 @@ class TestFork: XCTestCase {
     func testBasicForkWithSpecificPath() {
         let status = Git().clone("git@github.com:modulo-dm/test-add.git", path: "test-add")
         XCTAssertTrue(status == .success)
-        
         FileManager.setWorkingPath("test-add")
-        
-        let result = Modulo.run(["fork", "--only", "test-add" ], session: mockUrlSession )
+        let session = MockURLSession( "Hi there" )
+        let result = Modulo.run(["fork", "--only", "test-add" ], session: session as URLSessionProtocol? )
         XCTAssertTrue(result == .success)
-        
-            let url = NSURL(string: "http://www.tryswiftconf.com")!
-            
-            subject.get(url) { (_, _) -> Void in }
-            
-            XCTAssert(session.lastURL === url)
-        
-        print(session.resumedResponse(MyApp.apiUrl) != nil)  // true
+        var url = URL( string:"https://api.github.com/v2" )
+        XCTAssert(session.lastUrl == url)
     }
-    
-    // Only fork the specified module using except
-    func testBasicForkWithoutSpecificPath() {
-        let _ = Git().clone("git@github.com:modulo-dm/test-add.git", path: "test-add")
-        let status = Git().clone("git@github.com:modulo-dm/test-add.git", path: "test2-add")
-        XCTAssertTrue(status == .success)
-        
-        FileManager.setWorkingPath("test-add")
-        
-        let result = Modulo.run(["fork", "--except", "test2-add" ], session: mockUrlSession )
-        XCTAssertTrue(result == .success)
-    }
+//    
+//    // Only fork the specified module using except
+//    func testBasicForkWithoutSpecificPath() {
+//        let _ = Git().clone("git@github.com:modulo-dm/test-add.git", path: "test-add")
+//        let status = Git().clone("git@github.com:modulo-dm/test-add.git", path: "test2-add")
+//        XCTAssertTrue(status == .success)
+//        
+//        FileManager.setWorkingPath("test-add")
+//        
+//        let result = Modulo.run(["fork", "--except", "test2-add" ], session: session )
+//        XCTAssertTrue(result == .success)
+//    }
     
     
 }
