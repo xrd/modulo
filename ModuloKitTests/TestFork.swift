@@ -13,26 +13,27 @@ import ELFoundation
 public class MockURLSession : URLSessionProtocol {
     
     public var lastUrl: URL?
-    public var something: String = ""
     
     init() {
         lastUrl = nil
     }
 
-    init( _ string: String ) {
-        self.something = string
-    }
-    
     public func synchronousDataTask( _ url: URL ) -> ( Data?, URLResponse?, Error? ) {
         self.lastUrl = url
         
         return ( nil, nil, nil )
     }
 }
+//
+//public class MockGit : SCM {
+//    
+//    
+//}
 
 class TestFork: XCTestCase {
     let modulo = Modulo()
-    
+    let session = MockURLSession()
+//    let git = MockGit()
     
     override func setUp() {
         super.setUp()
@@ -70,13 +71,12 @@ class TestFork: XCTestCase {
         let status = Git().clone("git@github.com:modulo-dm/test-add.git", path: "test-add")
         XCTAssertTrue(status == .success)
         FileManager.setWorkingPath("test-add")
-        let session = MockURLSession( "Hi there" )
         let result = Modulo.run(["fork", "--only", "test-add" ], session: session as URLSessionProtocol? )
         XCTAssertTrue(result == .success)
         var url = URL( string:"https://api.github.com/v2" )
         XCTAssert(session.lastUrl == url)
     }
-//    
+////    
 //    // Only fork the specified module using except
 //    func testBasicForkWithoutSpecificPath() {
 //        let _ = Git().clone("git@github.com:modulo-dm/test-add.git", path: "test-add")
@@ -88,7 +88,7 @@ class TestFork: XCTestCase {
 //        let result = Modulo.run(["fork", "--except", "test2-add" ], session: session )
 //        XCTAssertTrue(result == .success)
 //    }
-    
+//    
     
 }
 

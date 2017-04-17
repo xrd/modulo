@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170632151EA525F000857019 /* ModuloUrlSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178BDAE61EA131A50000D2E8 /* ModuloUrlSession.swift */; };
+		170632161EA5271000857019 /* ModuloUrlSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178BDAE61EA131A50000D2E8 /* ModuloUrlSession.swift */; };
 		1716F84C1E9853E4004B52A5 /* ForkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716F84B1E9853E4004B52A5 /* ForkCommand.swift */; };
 		1716F8541E9854C4004B52A5 /* ForkCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716F84B1E9853E4004B52A5 /* ForkCommand.swift */; };
 		1716F85A1E98A5E7004B52A5 /* TestFork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716F8591E98A5E7004B52A5 /* TestFork.swift */; };
 		178BDADD1EA131740000D2E8 /* UrlSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178BDADC1EA131740000D2E8 /* UrlSessionProtocol.swift */; };
-		178BDADE1EA131740000D2E8 /* UrlSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178BDADC1EA131740000D2E8 /* UrlSessionProtocol.swift */; };
-		178BDAE71EA131A50000D2E8 /* ModuloUrlSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178BDAE61EA131A50000D2E8 /* ModuloUrlSession.swift */; };
-		178BDAE91EA132B20000D2E8 /* ModuloUrlSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178BDAE61EA131A50000D2E8 /* ModuloUrlSession.swift */; };
 		178BDAEA1EA132BB0000D2E8 /* UrlSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178BDADC1EA131740000D2E8 /* UrlSessionProtocol.swift */; };
 		468A8B171DF3F8B10060D93C /* TestGit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468A8B161DF3F8B10060D93C /* TestGit.swift */; };
 		653A1E5A1E2CA3BB00F24E70 /* TestCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653A1E591E2CA3BB00F24E70 /* TestCheckout.swift */; };
@@ -881,6 +880,7 @@
 				CAE55D171D14C9FB00411727 /* ModuleSpec.swift in Sources */,
 				CAE55C451D14928B00411727 /* main.swift in Sources */,
 				CAE55CE21D149BD800411727 /* DecodeOperators.swift in Sources */,
+				170632161EA5271000857019 /* ModuloUrlSession.swift in Sources */,
 				659D68A41E33E753008750C2 /* SetCommand.swift in Sources */,
 				CAE55CF61D149C0B00411727 /* Output.swift in Sources */,
 				CAE55CCA1D1497A200411727 /* NSObject.swift in Sources */,
@@ -890,7 +890,6 @@
 				CACB21351D3D4DE500ACA574 /* StatusCommand.swift in Sources */,
 				CAE55D151D14C9EE00411727 /* Extensions.swift in Sources */,
 				CAE55CD11D1497A200411727 /* ObjectAssociation.swift in Sources */,
-				178BDAE91EA132B20000D2E8 /* ModuloUrlSession.swift in Sources */,
 				CAE55D121D14C9EE00411727 /* Modulo.swift in Sources */,
 				CAE55CCE1D1497A200411727 /* TestHelper.swift in Sources */,
 				CAE55CE61D149BD800411727 /* JSON.swift in Sources */,
@@ -915,8 +914,8 @@
 				CAE55CA11D1494B200411727 /* InitCommand.swift in Sources */,
 				CAE55CA61D1494B200411727 /* SCM.swift in Sources */,
 				CAE55CA31D1494B200411727 /* Extensions.swift in Sources */,
+				170632151EA525F000857019 /* ModuloUrlSession.swift in Sources */,
 				CAE55CA21D1494B200411727 /* ErrorCode.swift in Sources */,
-				178BDAE71EA131A50000D2E8 /* ModuloUrlSession.swift in Sources */,
 				659D68A71E340516008750C2 /* MapCommand.swift in Sources */,
 				CAAB6E1F1D19BD3B00F22C48 /* UpdateCommand.swift in Sources */,
 				CAE55CA41D1494B200411727 /* Modulo.swift in Sources */,
@@ -950,7 +949,6 @@
 				CA33544A1D15CA3600ACD91C /* XCTestCase+Exceptions.m in Sources */,
 				CAE93D111D21A7BD00C00811 /* TestUpdate.swift in Sources */,
 				CA3354461D15C91000ACD91C /* TestAdd.swift in Sources */,
-				178BDADE1EA131740000D2E8 /* UrlSessionProtocol.swift in Sources */,
 				CACB20BA1D341A9200ACA574 /* Utils.swift in Sources */,
 				1716F85A1E98A5E7004B52A5 /* TestFork.swift in Sources */,
 			);

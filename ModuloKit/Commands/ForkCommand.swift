@@ -32,14 +32,20 @@ open class ForkCommand: NSObject, Command {
     open var verbose: Bool = false
     open var quiet: Bool = false
     private var session: URLSessionProtocol? = nil
+    private var onlyThis: String! = nil
+    private var exceptThis: String! = nil
     
     public func configureOptions() {
-        //        addOptionValue(["--tag"], usage: "specify the version tag to use", valueSignature: "<tag>") { (option, value) -> Void in
-        //            if let value = value {
-        //                self.checkoutType = .tag(name: value)
-        //            }
-        //        }
-        //
+        addOptionValue(["--only"], usage: "specify a SCM repository to use and ignore the others", valueSignature: "<short-name>") { (option, value) -> Void in
+            if let value = value {
+                self.onlyThis = value
+            }
+        }
+        addOptionValue(["--except"], usage: "specify a SCM repository to ignore, using all others", valueSignature: "<short-name>") { (option, value) -> Void in
+            if let value = value {
+                self.exceptThis = value
+            }
+        }
     }
     
     init( session: URLSessionProtocol? = nil ) {
